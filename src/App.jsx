@@ -4,7 +4,7 @@ import QuoteForm from './components/QuoteForm.jsx'
 
 const services = [
   ['Landscape Design', 'Custom landscape plans that bring together plants, materials and functional spaces around your home.'],
-  ['Lawn & Garden Care', 'Professional care that keeps your lawn, plants and garden looking its best throughout the year.'],
+  ['Lawn & Garden Care', 'Professional care that keeps your lawn, plants and garden looking their best throughout the year.'],
   ['Hardscaping', 'Patios, walkways and stone features designed to add structure, function and character to your landscape.'],
   ['Outdoor Living', 'Comfortable outdoor spaces designed for relaxing, dining and spending more time outside.'],
 ]
@@ -28,8 +28,8 @@ const faqs = [
 const gallery = [
   ['Landscape Design', 'landscape-design-lawn-and-planting', 'Sweeping lawn framed by layered planting beds, trees and stone paths.', '50% 55%'],
   ['Outdoor Living', 'outdoor-living-covered-lounge', 'Covered outdoor kitchen and dining area beside a fire-pit lounge.', '65% 50%'],
-  ['Hardscaping', 'hardscaping-stone-patio-and-steps', 'Stone patio, illuminated steps and retaining walls around a fire pit.', '40% 60%'],
-  ['Garden Design', 'garden-design-layered-planting', 'Layered flowers, shrubs and ornamental trees beside a garden path.', '55% 55%'],
+  ['Hardscaping', 'hardscaping-austin-limestone-patio', 'Modern Austin backyard with limestone patio, outdoor living area and native landscaping.', '65% 65%', '72% 65%'],
+  ['Garden Design', 'garden-design-austin-oak-and-native-planting', 'Austin backyard with layered native planting, mature oak, lawn and modern limestone home.', '52% 70%', '58% 70%'],
 ]
 
 function Arrow() {
@@ -120,8 +120,8 @@ export default function App() {
         </section>
         <section id="gallery" className="section container">
           <div className="section-heading"><div><p className="eyebrow">OUR WORK</p><h2>Spaces made<br /><em>to be enjoyed.</em></h2></div><a className="text-link" href="#quote">LET'S CREATE YOURS <Arrow /></a></div>
-          <div className="gallery">{gallery.map(([label, name, alt, position], index) => (
-            <figure key={label}><LandscapeImage name={name} alt={alt} position={position} /><figcaption><span>0{index + 1} /</span> {label}</figcaption></figure>
+          <div className="gallery">{gallery.map(([label, name, alt, position, mobilePosition], index) => (
+            <figure key={label}><LandscapeImage name={name} alt={alt} position={position} mobilePosition={mobilePosition} /><figcaption><span>0{index + 1} /</span> {label}</figcaption></figure>
           ))}</div>
         </section>
         <section id="service-area" className="service-area">
